@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endless Runner Game</title>
+    <!-- Include Kaboom.js library -->
+    <script src="https://kaboomjs.com/lib/0.5.1/kaboom.js"></script>
+</head>
+<body>
+    <!-- Your game content goes here -->
+    <script>
+        // Your Kaboom.js game code goes here
+        // Example:
+        // kaboom({ ... });
+// Import the Kaboom.js library
+import kaboom from "kaboom";
+
+// Initialize the Kaboom.js game
+kaboom();
+
+// Load the player sprite
+loadSprite("player", "path/to/player.png");
+
+// Define the player character
+const player = add([
+    sprite("player"),
+    pos(100, height() / 2), // Starting position
+    scale(2), // Scale the sprite
+    origin("center"), // Set the origin to the center of the sprite
+]);
+
+// Set up keyboard controls
+keyDown("left", () => {
+    player.move(-120, 0); // Move left
+});
+keyDown("right", () => {
+    player.move(120, 0); // Move right
+});
+
+// Game loop
+loop(() => {
+    // Move the player upwards
+    player.move(0, -50 * dt());
+
+    // Check if the player is out of bounds vertically
+    if (player.pos.y < 0 || player.pos.y > height()) {
+        // Game over logic
+        // Example: Reload the game
+        location.reload();
+    }
+});
+    </script>
+</body>
+</html>
