@@ -1,0 +1,79 @@
+IN A BROWSER ENVIRONMENT 
+
+ const magicNum = 537;
+
+const warmer = Array.from({ length: 50 }, (_, index) => index + 400);
+const hot = Array.from({ length: 50 }, (_, index) => index + 450);
+const redHot = Array.from({ length: 37 }, (_, index) => index + 500);
+const warm = Array.from({ length: 100 }, (_, index) => index + 300);
+const cold = Array.from({ length: 50 }, (_, index) => index + 250);
+const colder = Array.from({ length: 150 }, (_, index) => index + 100);
+const freezing = Array.from({ length: 100 }, (_, index) => index + 0);
+
+const input = prompt('Guess the magic number ');
+const guess = parseInt(input);
+
+if (hot.includes(guess)) {
+  console.log('You are hot');
+} else if (warmer.includes(guess)) {
+  console.log('You are getting warmer');
+} else if (warm.includes(guess)) {
+  console.log('You are warm');
+} else if (guess === magicNum) {
+  console.log(`Congratulations ${magicNum} is the magic number`);
+} else if (cold.includes(guess)) {
+  console.log('You are cold');
+} else if (redHot.includes(guess)) {
+  console.log('You are red hot');
+} else if (colder.includes(guess)) {
+  console.log('You are getting colder');
+} else if (freezing.includes(guess)) {
+  console.log('You are freezing');
+} else {
+  console.log('Your guess is out of range');
+}
+
+IN A NODE ENVIRONMENT 
+
+ const readline = require('readline');
+
+const magicNum = 537;
+
+const warmer = Array.from({ length: 50 }, (_, index) => index + 400);
+const hot = Array.from({ length: 50 }, (_, index) => index + 450);
+const redHot = Array.from({ length: 37 }, (_, index) => index + 500);
+const warm = Array.from({ length: 100 }, (_, index) => index + 300);
+const cold = Array.from({ length: 50 }, (_, index) => index + 250);
+const colder = Array.from({ length: 150 }, (_, index) => index + 100);
+const freezing = Array.from({ length: 100 }, (_, index) => index + 0);
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('Guess the magic number: ', (input) => {
+  const guess = parseInt(input);
+
+  if (hot.includes(guess)) {
+    console.log('You are hot');
+  } else if (warmer.includes(guess)) {
+    console.log('You are getting warmer');
+  } else if (warm.includes(guess)) {
+    console.log('You are warm');
+  } else if (guess === magicNum) {
+    console.log(`Congratulations ${magicNum} is the magic number`);
+  } else if (cold.includes(guess)) {
+    console.log('You are cold');
+  } else if (redHot.includes(guess)) {
+    console.log('You are red hot');
+  } else if (colder.includes(guess)) {
+    console.log('You are getting colder');
+  } else if (freezing.includes(guess)) {
+    console.log('You are freezing');
+  } else {
+    console.log('Your guess is out of range');
+  }
+
+  rl.close();
+});
