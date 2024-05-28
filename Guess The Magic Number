@@ -1,6 +1,6 @@
-IN A BROWSER ENVIRONMENT 
+//IN A BROWSER ENVIRONMENT 
 
- const magicNum = 537;
+ /*const magicNum = 537;
 
 const warmer = Array.from({ length: 50 }, (_, index) => index + 400);
 const hot = Array.from({ length: 50 }, (_, index) => index + 450);
@@ -31,9 +31,9 @@ if (hot.includes(guess)) {
   console.log('You are freezing');
 } else {
   console.log('Your guess is out of range');
-}
+}*/
 
-IN A NODE ENVIRONMENT 
+//IN A NODE ENVIRONMENT 
 
  const readline = require('readline');
 
