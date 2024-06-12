@@ -18,8 +18,23 @@ h1{
 /*animation: hinge 5s forwards infinite;*/
 
 }
+
+.start{
+height:40px;
+width:100px;
+font-style:oblique;
+font-weight: bold;
+font-size: 15.5px;
+}
+#start{
+    margin: auto;
+    position:relative;
+    left: 500px;
+    top:100px;
+}
 container{
     display: flex;
+    
     gap: 70px;
     position: relative;
     top: 200px;
@@ -27,6 +42,10 @@ container{
    /* perspective: 1000px;*/
     
 }
+#container{
+    display: none;
+}
+
 /*@keyframes hinge{
     0%{
         transform: rotateY(0deg);
