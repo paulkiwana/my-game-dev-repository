@@ -1,6 +1,8 @@
 let points = 0;
 const scorediv = document.getElementById("scorediv")
-const door1 = document.getElementById("door1")
+const door1 = document.getElementById("door1");
+const door2 = document.getElementById("door2");
+const door3 = document.getElementById("door3");
 const scoredivOperations = () => {scorediv.innerHTML = `${points}points`
 scorediv.style.width = "100px";
 scorediv.style.height ="50px";
@@ -15,10 +17,16 @@ door1.style.textAlign = "center"
 scoredivOperations()
 },{once:true})
 
-const door2 = document.getElementById("door2")
+
 
 door2.addEventListener("click", function instruction2(){
     points += 2
     door2.style.backgroundColor = "orange"
+    scoredivOperations()
+},{once:true})
+
+door3.addEventListener("click", instruction3 = () => {
+    points--
+    door3.style.backgroundColor = "black" 
     scoredivOperations()
 },{once:true})
