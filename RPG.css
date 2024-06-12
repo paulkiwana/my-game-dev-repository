@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(7, 11, 31);
+}
+h1{
+    color:aquamarine;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+
+}
+#door1, #door2, #door3{
+    height: 300px;
+    width: 150px;
+    background-color: brown;
+    border-radius: 10%;
+   /* position:absolute;*/
+   /* transform-origin: right;*/
+/*animation: hinge 5s forwards infinite;*/
+
+}
+container{
+    display: flex;
+    gap: 70px;
+    position: relative;
+    top: 200px;
+    left: 400px;
+   /* perspective: 1000px;*/
+    
+}
+/*@keyframes hinge{
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(-120deg);
+    }
+}*/
