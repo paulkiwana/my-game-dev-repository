@@ -18,7 +18,9 @@ h1{
 /*animation: hinge 5s forwards infinite;*/
 
 }
-
+#door1level{
+    display: none;
+}
 .start{
 height:40px;
 width:100px;

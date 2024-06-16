@@ -5,9 +5,11 @@ const door2 = document.getElementById("door2");
 const door3 = document.getElementById("door3");
 const container = document.getElementById("container");
 const start = document.getElementById("start")
+const door1level = document.getElementById("door1level")
+//const a = document.getElementById("a")
 const scoredivOperations = () => {scorediv.innerHTML = `${points}points`
 scorediv.style.width = "100px";
-scorediv.style.height ="50px";
+scorediv.stysle.height ="50px";
 scorediv.style.backgroundColor = "black"
 scorediv.style.margin = "auto"
 scorediv.style.textAlign = "center"}
@@ -15,9 +17,12 @@ scorediv.style.textAlign = "center"}
 
 door1.addEventListener("click",function instruction(){
     points += 2
-    door1.style.backgroundColor = "green"
-door1.style.textAlign = "center"
+    //door1.style.backgroundColor = "green"
+//door1.style.textAlign = "center"
 scoredivOperations()
+container.style.display = "none"
+door1level.style.display = "block"
+
 },{once:true})
 
 
